@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+  var pulaLinha = function(){
+    document.write("<br>");
+  }
+
+  var mostra = function(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var calculaIMC = function(peso, altura){
+    var imc = peso / (altura * altura);
+    return imc;
+  }
+
+
+  var imcPrimo = calculaIMC(66, 1.73);
+  var diferencaDaMagreza = imcPrimo - 18.5;
+  var diferencaDaObesidade = 35 - imcPrimo;
+  mostra("O IMC é: " + imcPrimo.toFixed(2));
+  mostra("O IMC do meu primo está " + diferencaDaMagreza.toFixed(2) + " acima do limite da magreza");
+  mostra("E está "+ diferencaDaObesidade.toFixed(2) + " pontos distante da obesidade");
+</script>

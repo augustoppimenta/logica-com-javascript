@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+
+<script>
+
+  var calculaDiasDeVida = function(idade) {
+    return (idade * 365);
+  }
+
+  var calculaBatimentos = function(dias){
+    return (dias * 24 * 60 * 80);
+  }
+
+
+  var idade = 34;
+  var batimentos = calculaBatimentos(calculaDiasDeVida(idade));
+  document.write(batimentos);
+</script>

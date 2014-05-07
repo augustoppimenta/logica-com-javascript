@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha () {
+  document.write("<br>");
+}
+
+function mostra (frase) {
+  document.write(frase);
+  pulaLinha();
+}
+
+function sorteia (numero) {
+  return Math.round(Math.random() * numero);
+}
+
+  var numero = prompt("Me fale um número: ");
+  if (isNaN(numero)) {
+    mostra("apenas números são válidos");
+  };
+  var numeroPensado = sorteia(numero);
+  var chute = prompt("Já pensei! Qual o número você acha que é?");
+  if (isNaN(chute)) {
+    mostra("apenas números são válidos");
+  };
+  if (chute == numeroPensado) {
+    mostra("Parabéns! Você acertou na mosca :)");
+  }
+  if (chute != numeroPensado && chute > numeroPensado){
+    mostra("Você chutou em um número MAIOR do que eu tinha pensado! Eu tinha pensado no número " + numeroPensado);
+  }
+  if (chute != numeroPensado && chute < numeroPensado) {
+    mostra("Você chutou em um número MENOR do que eu tinha pensado! Eu tinha pensado no número " + numeroPensado);
+  }
+
+</script>

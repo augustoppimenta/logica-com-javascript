@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+  function mostra (frase) {
+    document.write(frase + "<br>");
+  }
+
+  var numeroPensado = Math.round(Math.random() * 1000);
+  var numeroDeTentativas = 1;
+
+  while(chute != numeroPensado){
+    var chute = prompt("Já pensei! Diga o número que estou pensando:");
+    if (chute == numeroPensado) {
+      mostra("Uhu! Você acertou em cheio o numero que eu pensei! ");
+      break;
+    }
+    if (chute < numeroPensado) {
+      mostra("Você errou! Você está chutando um valor abaixo do que pensei");
+    };
+    if (chute > numeroPensado) {
+      mostra("Você errou! Você está chutando um valor acima do que pensei");
+    }
+    numeroDeTentativas++
+
+  }
+  mostra("O numero que pensei era: " + numeroPensado);
+  mostra("Você teve " + numeroDeTentativas + " tentativas para acertar o numero que eu pensei!");
+</script>

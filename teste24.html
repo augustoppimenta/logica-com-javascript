@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<script>
+
+  function mostra (frase) {
+    document.write(frase + "<br>");
+  }
+
+
+  var inicio = parseInt(prompt("Qual o ano de inicio?"));
+  var limite = parseInt(prompt("Qual o ano de término?"));
+  while (inicio <= limite){
+    mostra( inicio + " tem copa!")
+    inicio = inicio + 4;
+  }
+
+  mostra("Ufa! Ainda bem que acabou. Esses foram os anos que tivemos copa até o ano " + limite)
+</script>
